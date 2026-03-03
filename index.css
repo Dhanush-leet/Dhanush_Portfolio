@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 10 10 10;
+  --foreground: 255 255 255;
+  --surface: 18 18 18;
+  --secondary: 163 163 163;
+  --accent: 59 130 246;
+  --border: 255 255 255;
+}
+
+.light {
+  --background: 245 245 245;
+  --foreground: 10 10 10;
+  --surface: 255 255 255;
+  --secondary: 82 82 82;
+  --accent: 37 99 235;
+  --border: 0 0 0;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--secondary) / 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--secondary));
+}
