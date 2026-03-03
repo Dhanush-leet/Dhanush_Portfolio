@@ -20,6 +20,7 @@ const Navigation: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Academics', href: '/#academics' },
     { name: 'Philosophy', href: '/#philosophy' },
     { name: 'Stack', href: '/#stack' },
   ];
@@ -33,7 +34,11 @@ const Navigation: React.FC = () => {
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border/10' : 'bg-transparent'
           }`}
       >
-        <Link to="/" className="font-mono text-xl tracking-tighter hover:opacity-70 transition-opacity text-primary">
+        <Link
+          to="/"
+          onClick={() => window.scrollTo(0, 0)}
+          className="font-mono text-xl tracking-tighter hover:opacity-70 transition-opacity text-primary"
+        >
           DHANUSH_G
         </Link>
 
@@ -60,6 +65,9 @@ const Navigation: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.href}
+                onClick={() => {
+                  if (link.name === 'Home') window.scrollTo(0, 0);
+                }}
                 className="text-xs font-mono uppercase tracking-widest text-secondary hover:text-primary transition-colors"
               >
                 {link.name}
@@ -126,7 +134,10 @@ const Navigation: React.FC = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      if (link.name === 'Home') window.scrollTo(0, 0);
+                    }}
                     className="text-2xl font-light tracking-tight text-primary hover:text-secondary transition-colors"
                   >
                     {link.name}

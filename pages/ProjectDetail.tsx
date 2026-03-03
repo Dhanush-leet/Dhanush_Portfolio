@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
@@ -7,6 +7,7 @@ import { projectsData } from '../data/projects';
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const project = projectsData.find(p => p.id === id);
+  const [showGallery, setShowGallery] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,11 +36,11 @@ const ProjectDetail: React.FC = () => {
         <Link to="/projects" className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-secondary hover:text-primary transition-colors mb-12">
           <ArrowLeft size={14} /> Back to Works
         </Link>
-        
+
         <h1 className="text-5xl md:text-8xl font-light tracking-tighter mb-8 text-primary">
           {project.title}
         </h1>
-        
+
         <div className="flex flex-col md:flex-row gap-8 md:gap-24 text-sm font-mono uppercase tracking-widest text-secondary">
           <div>
             <span className="block text-primary/40 mb-2">Client</span>
@@ -71,9 +72,9 @@ const ProjectDetail: React.FC = () => {
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         className="w-full aspect-video md:aspect-[21/9] bg-surface mb-24 overflow-hidden"
       >
-        <img 
-          src={project.coverImage} 
-          alt={project.title} 
+        <img
+          src={project.coverImage}
+          alt={project.title}
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover"
         />
@@ -82,7 +83,7 @@ const ProjectDetail: React.FC = () => {
       {/* Content Section */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 mb-24">
         {/* Left Column: Description */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -95,10 +96,27 @@ const ProjectDetail: React.FC = () => {
               {paragraph}
             </p>
           ))}
+
+          {project.galleryImages.length > 0 && !showGallery && (
+            <div className="mt-8">
+              <button
+                onClick={() => {
+                  setShowGallery(true);
+                  setTimeout(() => {
+                    document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 10);
+                }}
+                className="inline-flex items-center gap-3 px-6 py-4 bg-surface/50 hover:bg-surface border border-border/10 rounded-2xl transition-all duration-300 font-mono text-sm tracking-widest text-primary group w-fit"
+              >
+                <span>Explore Screenshots :</span>
+                <span className="text-xl group-hover:translate-y-2 lg:group-hover:translate-x-2 lg:group-hover:translate-y-0 transition-transform">👇</span>
+              </button>
+            </div>
+          )}
         </motion.div>
 
         {/* Right Column: Tech Stack */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -118,21 +136,22 @@ const ProjectDetail: React.FC = () => {
       </div>
 
       {/* Gallery Section */}
-      {project.galleryImages.length > 0 && (
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
+      {project.galleryImages.length > 0 && showGallery && (
+        <motion.div
+          id="gallery"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          transition={{ duration: 0.3 }}
+          className="flex flex-col gap-12 pt-12"
         >
           {project.galleryImages.map((img, idx) => (
-            <div key={idx} className={`bg-surface overflow-hidden ${idx === 2 ? 'md:col-span-2 aspect-video md:aspect-[21/9]' : 'aspect-square md:aspect-[4/3]'}`}>
-              <img 
-                src={img} 
-                alt={`${project.title} gallery ${idx + 1}`} 
+            <div key={idx} className="bg-surface/30 w-full overflow-hidden rounded-xl border border-border/10 flex justify-center p-4">
+              <img
+                src={img}
+                alt={`${project.title} gallery ${idx + 1}`}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-contain max-h-[85vh] hover:scale-[1.02] transition-transform duration-700"
               />
             </div>
           ))}
