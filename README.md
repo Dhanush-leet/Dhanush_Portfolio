@@ -4,6 +4,14 @@
 
 ---
 
+## 🚀 Live Website
+
+🔗 **Visit Now:**  
+👉 **https://dhanush-portfolio-delta.vercel.app/**
+
+🎥 **Demo Video:**  
+👉 https://youtu.be/9Zyd6iz8P6E
+
 ## 📌 Overview
 
 The **DHANUSH_G Portfolio** is a premium, highly interactive personal portfolio website designed to showcase robust backend projects, academic achievements, and core development philosophies. Built with **React (Vite + TypeScript)** and **Tailwind CSS**, the platform features a cinematic, dark luxury theme.
@@ -15,8 +23,6 @@ The platform is designed to be:
 *   ⚡ **Extremely Fast & Modular**
 *   📱 **Fully Responsive (Mobile-First)**
 *   🎯 **User-Centric & Interactive**
-
-## Demo Video Link : https://youtu.be/9Zyd6iz8P6E
 
 ---
 
