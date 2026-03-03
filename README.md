@@ -70,7 +70,10 @@ portfolio/
 *   Bold **"From Code to Intelligence"** core branding setup.
 
 📸 **Screenshot Placeholder**
-*(Insert Hero Section Screenshot Here)*
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/7cd2a1a6-5410-48bf-8455-7b5a7b84a0f9" />
+
+<img width="1919" height="985" alt="image" src="https://github.com/user-attachments/assets/bb214ed0-de92-447f-b3d3-3d110795d461" />
+
 
 ---
 
@@ -81,7 +84,9 @@ portfolio/
 *   Interactive, uncropped image galleries with smooth reveal interactions.
 
 📸 **Screenshot Placeholder**
-*(Insert Projects Grid / Detail Page Screenshot Here)*
+<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/569a7068-6176-41cd-a20b-adbf6c142329" />
+
+<img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/b62ab9c7-55c2-49cf-883b-3eaa6e0f4bdd" />
 
 ---
 
@@ -91,7 +96,8 @@ portfolio/
 *   Clear typography hierarchy displaying CGPA, Institutions, and Batches.
 
 📸 **Screenshot Placeholder**
-*(Insert Academics Section Screenshot Here)*
+<img width="1919" height="876" alt="image" src="https://github.com/user-attachments/assets/2a80642f-eaf6-4fb1-a6c4-216e3cad181a" />
+
 
 ---
 
@@ -100,7 +106,7 @@ portfolio/
 *   Interactive hover states that glow and shift, establishing a premium tactile feel.
 
 📸 **Screenshot Placeholder**
-*(Insert Philosophy Section Screenshot Here)*
+<img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/fbb59760-d06d-4c1f-a9a2-7d9484fb6845" />
 
 ---
 
@@ -109,7 +115,7 @@ portfolio/
 *   Categorized by Frontend, Backend, Database, and AI integrations.
 
 📸 **Screenshot Placeholder**
-*(Insert Tech Stack Section Screenshot Here)*
+<img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/7c7803c1-9ab2-441c-9797-95b5c0d1c850" />
 
 ---
 
@@ -146,4 +152,3 @@ The application is completely modular, allowing new projects and case studies to
 
 **Dhanush G**  
 *Full Stack Developer | AI-Driven Systems Builder | CSBS Undergraduate*  
-*Portfolio Source Code*
