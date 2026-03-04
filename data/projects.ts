@@ -5,6 +5,8 @@ import careerImage from "@/src/assets/projects/career.png";
 import kanalImage from "@/src/assets/projects/kanal.png";
 import cafeImage from "@/src/assets/projects/cafe.png";
 import hospitalImage from "@/src/assets/projects/hospital.png";
+import blockchainImage from "@/src/assets/projects/blockchain.png";
+
 
 export interface Project {
   id: string;
@@ -52,6 +54,31 @@ export const projectsData: Project[] = [
       "https://github.com/user-attachments/assets/b99701ac-23a6-4ebb-a340-c25d7ab6ebab"
     ],
     link: "https://github.com/Dhanush-leet/Crypto-Portfolio-Tracker-with-Risk-Scam-Analysis_Infosys"
+  },
+  {
+    id: "blockchain-certificate-verification",
+    title: "Blockchain Certificate Storage & Verification System",
+    client: "Personal Web3 Project",
+    year: "2026",
+    role: "Full Stack & Blockchain Developer",
+    description: "A secure, decentralized platform for academic credential storage using Ethereum blockchain and SHA-256 hashing to ensure certificate immutability.",
+    fullDescription: [
+      "The Blockchain Certificate Verification System is a comprehensive DApp designed to eliminate credential fraud through cryptographic proof of authenticity.",
+      "By storing certificate hashes (SHA-256) on the Ethereum blockchain via Solidity smart contracts, the system creates an untamperable audit trail for academic records.",
+      "The architecture integrates a React frontend with absolute Web3 capabilities (Ethers.js + MetaMask) and a Spring Boot backend for secure data processing and RESTful communication.",
+      "Key functionalities include institutional-grade certificate storage, instant public verification via unique IDs, and seamless blockchain network interaction using Ganache and MetaMask."
+    ],
+    technologies: ["Solidity", "Ethereum", "React", "Spring Boot", "Ethers.js", "MetaMask", "Ganache", "Tailwind CSS"],
+    coverImage: blockchainImage,
+    galleryImages: [
+      "https://github.com/user-attachments/assets/c64428e2-8590-4495-a088-d03fc6cb0ce5",
+      "https://github.com/user-attachments/assets/61edf5fe-ebe4-44df-9428-725397b3f3d4",
+      "https://github.com/user-attachments/assets/ad76bd76-6ea2-4b76-8545-7876b89a5ed7",
+      "https://github.com/user-attachments/assets/ebcb44ae-e2b1-4ae7-9bcd-e92c26d3f11e",
+      "https://github.com/user-attachments/assets/aaddf175-da93-4aad-8d55-4c812f047243",
+      "https://github.com/user-attachments/assets/ed374099-6c78-424f-8067-6e06d6157b6c"
+    ],
+    link: "https://youtu.be/2WqNW6VokC8"
   },
   {
     id: "medvault",

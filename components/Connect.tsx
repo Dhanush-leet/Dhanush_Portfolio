@@ -91,7 +91,7 @@ const Connect: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
                         <a
-                            href="https://drive.google.com/uc?export=download&id=1LjVTsgCK_idVaj3O9WdnBsI4oouVJ4U6"
+                            href="https://drive.google.com/uc?export=download&id=1eB7UyRvSecwG1ML5rWn-KoVHegQAc5g8"
                             target="_blank"
                             rel="noopener noreferrer"
                             download="Dhanush_G_Resume.pdf"
