@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
             className="group relative flex flex-col md:flex-row gap-8 md:gap-16 items-center"
           >
             {/* Image Container */}
-            <Link 
+            <Link
               to={`/projects/${project.id}`}
               className="w-full md:w-3/5 overflow-hidden bg-surface relative aspect-[16/9]"
             >
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
                 src={project.coverImage}
                 alt={project.title}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
               />
             </Link>
 
@@ -54,13 +54,13 @@ const Projects: React.FC = () => {
                 <span className="w-1 h-1 bg-secondary rounded-full" />
                 <span>{project.client}</span>
               </div>
-              
+
               <Link to={`/projects/${project.id}`}>
                 <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-4 group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h2>
               </Link>
-              
+
               <p className="text-secondary font-light mb-8 leading-relaxed">
                 {project.description}
               </p>
@@ -78,7 +78,7 @@ const Projects: React.FC = () => {
                 )}
               </div>
 
-              <Link 
+              <Link
                 to={`/projects/${project.id}`}
                 className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest hover:text-accent transition-colors w-fit group/btn text-primary"
               >

@@ -67,10 +67,10 @@ const ProjectDetail: React.FC = () => {
 
       {/* Hero Image */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
+        initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        className="w-full aspect-video md:aspect-[21/9] bg-surface mb-24 overflow-hidden"
+        className="w-full aspect-video md:aspect-[21/9] bg-surface/50 mb-24 overflow-hidden rounded-2xl border border-border/10 relative"
       >
         <img
           src={project.coverImage}
@@ -78,6 +78,8 @@ const ProjectDetail: React.FC = () => {
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover"
         />
+        {/* Subtle overlay for better integration */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
       </motion.div>
 
       {/* Content Section */}
@@ -146,12 +148,12 @@ const ProjectDetail: React.FC = () => {
           className="flex flex-col gap-12 pt-12"
         >
           {project.galleryImages.map((img, idx) => (
-            <div key={idx} className="bg-surface/30 w-full overflow-hidden rounded-xl border border-border/10 flex justify-center p-4">
+            <div key={idx} className="bg-surface/30 w-full overflow-hidden rounded-xl border border-border/10 flex justify-center items-center p-2 md:p-8">
               <img
                 src={img}
                 alt={`${project.title} gallery ${idx + 1}`}
                 referrerPolicy="no-referrer"
-                className="w-full h-auto object-contain max-h-[85vh] hover:scale-[1.02] transition-transform duration-700"
+                className="max-w-full h-auto object-contain rounded-lg shadow-2xl hover:scale-[1.01] transition-transform duration-700"
               />
             </div>
           ))}
