@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
             className="flex flex-col gap-8 border-t border-border/10 pt-8"
           >
             <p className="text-lg md:text-xl text-secondary font-light leading-relaxed max-w-xl">
-              I’m Dhanush G, a Full Stack Developer specializing in Java, Spring Boot, React, and AI-powered applications. I build secure, scalable, production-ready systems that blend strong backend architecture with modern frontend experiences.
+              I’m <span className="text-2xl md:text-3xl font-semibold text-primary">Dhanush <span className="text-accent">G</span></span>, a Full Stack Developer specializing in Java, Spring Boot, React, and AI-powered applications. I build secure, scalable, production-ready systems that blend strong backend architecture with modern frontend experiences.
             </p>
 
             <div className="flex flex-col gap-4">
