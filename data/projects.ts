@@ -6,7 +6,7 @@ import kanalImage from "@/src/assets/projects/kanal.png";
 import cafeImage from "@/src/assets/projects/cafe.png";
 import hospitalImage from "@/src/assets/projects/hospital.png";
 import blockchainImage from "@/src/assets/projects/blockchain_wide.png";
-import blockchainGallery1 from "@/src/assets/projects/blockchain_v1.png";
+import blockchainGallery1 from "@/src/assets/projects/blockchain_landing.png";
 
 
 export interface Project {
