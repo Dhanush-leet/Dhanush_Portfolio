@@ -4,6 +4,7 @@ import Philosophy from '../components/Philosophy';
 import Work from '../components/Work';
 import TechStack from '../components/TechStack';
 import Academics from '../components/Academics';
+import Connect from '../components/Connect';
 
 const Home: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
       <Philosophy />
       <Work />
       <TechStack />
+      <Connect />
     </main>
   );
 };

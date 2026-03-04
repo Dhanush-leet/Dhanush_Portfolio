@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import ThemeToggle from './ThemeToggle';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +19,11 @@ const Navigation: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Projects', href: '/projects' },
     { name: 'Academics', href: '/#academics' },
     { name: 'Philosophy', href: '/#philosophy' },
+    { name: 'Projects', href: '/#projects' },
     { name: 'Stack', href: '/#stack' },
+    { name: 'Connect', href: '/#connect' },
   ];
 
   return (
@@ -36,7 +37,6 @@ const Navigation: React.FC = () => {
       >
         <Link
           to="/"
-          onClick={() => window.scrollTo(0, 0)}
           className="font-mono text-xl tracking-tighter hover:opacity-70 transition-opacity text-primary"
         >
           DHANUSH_G
@@ -45,41 +45,28 @@ const Navigation: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            link.href.startsWith('/#') && location.pathname !== '/' ? (
-              <a
+            link.href.includes('#') ? (
+              <HashLink
                 key={link.name}
-                href={link.href}
-                className="text-xs font-mono uppercase tracking-widest text-secondary hover:text-primary transition-colors"
+                smooth
+                to={link.href}
+                className={`text-xs font-mono uppercase tracking-widest transition-colors ${link.name === 'Connect'
+                  ? 'px-4 py-2 border border-border/20 hover:bg-primary hover:text-background text-primary'
+                  : 'text-secondary hover:text-primary'
+                  }`}
               >
                 {link.name}
-              </a>
-            ) : link.href.startsWith('/#') ? (
-              <a
-                key={link.name}
-                href={link.href.substring(1)}
-                className="text-xs font-mono uppercase tracking-widest text-secondary hover:text-primary transition-colors"
-              >
-                {link.name}
-              </a>
+              </HashLink>
             ) : (
               <Link
                 key={link.name}
                 to={link.href}
-                onClick={() => {
-                  if (link.name === 'Home') window.scrollTo(0, 0);
-                }}
                 className="text-xs font-mono uppercase tracking-widest text-secondary hover:text-primary transition-colors"
               >
                 {link.name}
               </Link>
             )
           ))}
-          <a
-            href="mailto:dhanushsankar4567@gmail.com"
-            className="text-xs font-mono uppercase tracking-widest px-4 py-2 border border-border/20 hover:bg-primary hover:text-background transition-all text-primary"
-          >
-            Connect
-          </a>
           <ThemeToggle />
         </div>
 
@@ -112,32 +99,21 @@ const Navigation: React.FC = () => {
             </button>
             <div className="flex flex-col items-center gap-8">
               {navLinks.map((link) => (
-                link.href.startsWith('/#') && location.pathname !== '/' ? (
-                  <a
+                link.href.includes('#') ? (
+                  <HashLink
                     key={link.name}
-                    href={link.href}
+                    smooth
+                    to={link.href}
                     onClick={() => setIsOpen(false)}
                     className="text-2xl font-light tracking-tight text-primary hover:text-secondary transition-colors"
                   >
                     {link.name}
-                  </a>
-                ) : link.href.startsWith('/#') ? (
-                  <a
-                    key={link.name}
-                    href={link.href.substring(1)}
-                    onClick={() => setIsOpen(false)}
-                    className="text-2xl font-light tracking-tight text-primary hover:text-secondary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  </HashLink>
                 ) : (
                   <Link
                     key={link.name}
                     to={link.href}
-                    onClick={() => {
-                      setIsOpen(false);
-                      if (link.name === 'Home') window.scrollTo(0, 0);
-                    }}
+                    onClick={() => setIsOpen(false)}
                     className="text-2xl font-light tracking-tight text-primary hover:text-secondary transition-colors"
                   >
                     {link.name}
