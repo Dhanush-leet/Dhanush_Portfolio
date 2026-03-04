@@ -75,7 +75,6 @@ const ProjectDetail: React.FC = () => {
         <img
           src={project.coverImage}
           alt={project.title}
-          referrerPolicy="no-referrer"
           className="w-full h-full object-cover"
         />
         {/* Subtle overlay for better integration */}
@@ -152,7 +151,6 @@ const ProjectDetail: React.FC = () => {
               <img
                 src={img}
                 alt={`${project.title} gallery ${idx + 1}`}
-                referrerPolicy="no-referrer"
                 className="max-w-full h-auto object-contain rounded-lg shadow-2xl hover:scale-[1.01] transition-transform duration-700"
               />
             </div>

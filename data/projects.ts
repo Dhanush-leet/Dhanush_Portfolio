@@ -6,6 +6,7 @@ import kanalImage from "@/src/assets/projects/kanal.png";
 import cafeImage from "@/src/assets/projects/cafe.png";
 import hospitalImage from "@/src/assets/projects/hospital.png";
 import blockchainImage from "@/src/assets/projects/blockchain_wide.png";
+import blockchainGallery1 from "@/src/assets/projects/blockchain_v1.png";
 
 
 export interface Project {
@@ -71,7 +72,7 @@ export const projectsData: Project[] = [
     technologies: ["Solidity", "Ethereum", "React", "Spring Boot", "Ethers.js", "MetaMask", "Ganache", "Tailwind CSS"],
     coverImage: blockchainImage,
     galleryImages: [
-      "https://github.com/user-attachments/assets/c64428e2-8590-4495-a088-d03fc6cb0ce5",
+      blockchainGallery1,
       "https://github.com/user-attachments/assets/61edf5fe-ebe4-44df-9428-725397b3f3d4",
       "https://github.com/user-attachments/assets/ad76bd76-6ea2-4b76-8545-7876b89a5ed7",
       "https://github.com/user-attachments/assets/ebcb44ae-e2b1-4ae7-9bcd-e92c26d3f11e",
