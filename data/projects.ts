@@ -1,11 +1,11 @@
-import cryptoImage from "@/src/assets/projects/crypto.png";
+import cryptoImage from "@/src/assets/projects/crypto_cover.jpg";
 import medvaultImage from "@/src/assets/projects/medvault.png";
 import eventoraImage from "@/src/assets/projects/eventora.png";
 import careerImage from "@/src/assets/projects/career.png";
-import kanalImage from "@/src/assets/projects/kanal.png";
-import cafeImage from "@/src/assets/projects/cafe.png";
+import kanalImage from "@/src/assets/projects/kanal_cover.jpg";
+import cafeImage from "@/src/assets/projects/cafe_cover.png";
 import hospitalImage from "@/src/assets/projects/hospital.png";
-import blockchainImage from "@/src/assets/projects/blockchain_wide.png";
+import blockchainImage from "@/src/assets/projects/blockchain_cover.png";
 import blockchainGallery1 from "@/src/assets/projects/blockchain_landing.png";
 
 
